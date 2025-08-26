@@ -277,6 +277,7 @@ public class MainTest {
         boolean expected = true;
         boolean actual = Main.isPrime(a);
 
+        assertTrue(actual);
         assertEquals(expected, actual);
 
     }
