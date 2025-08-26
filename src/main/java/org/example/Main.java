@@ -30,6 +30,23 @@ public class Main {
         return null;
     }
 
+    public static double divide(int a, int b) {
+        if (b == 0) throw new IllegalArgumentException("Argument 'divisor' is 0");
+
+        return (double) a / b;
+    }
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) return false;
+        if (number == 2) return true;
+        if (number % 2 == 0) return false;
+
+        for (int i = 3; i <= Math.sqrt(number); i +=2) {
+            if (number % i == 0) return false;
+        }
+        return true;
+    }
+
     public static String fizzBuzz(int n) {
         if (n % 3 == 0 && n % 5 == 0) {
             return "FizzBuzz";

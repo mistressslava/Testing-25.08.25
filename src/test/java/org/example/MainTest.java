@@ -260,4 +260,24 @@ public class MainTest {
         System.out.println(Arrays.toString(actual));
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    void testDivisionByZero() {
+        int a = 5;
+        int b = 0;
+
+        assertThrows(IllegalArgumentException.class, () -> Main.divide(a, b));
+    }
+
+
+    @Test
+    void isPrime() {
+        int a = 11;
+
+        boolean expected = true;
+        boolean actual = Main.isPrime(a);
+
+        assertEquals(expected, actual);
+
+    }
 }
